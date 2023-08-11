@@ -11,6 +11,7 @@ import Image from "next/image";
 import { LoadingPage, LoadingSpinner } from "~/components/loading";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 
 dayjs.extend(relativeTime)
@@ -37,7 +38,7 @@ const CreatePostWizard = () => {
   
   const [input, setInput] = useState("");
 
-  console.log(user);
+  // console.log(user);
 
   if(!user) return null;
 
@@ -86,14 +87,23 @@ const PostView = (props: PostWithUser) => {
 
   return (
     <div key={post.id} className="border-b border-slate-200 p-4 gap-3 flex">
-      <img 
+      <Image
       src={author.profileImageUrl} 
       alt="Profile Image" 
       className="h-14 w-14 rounded-full"
+      width={56}
+      height={56}
       />
       <div className="flex flex-col">
         <div className="flex text-slate-200 font-thin gap-2">
-          <span className="font-bold">{`@${author.username}`}</span><span>{`· ${dayjs(post.createdAt).fromNow()}`}</span>
+          <Link href={`/@${author.username}`}>
+            <span className="font-bold">{`@${author.username}`}</span>
+          </Link>
+          <Link href={`/post/${post.id}`}>
+            <span>{`· ${dayjs(
+              post.createdAt
+              ).fromNow()}`}</span>
+          </Link>
         </div>
         <span className="text-2xl">{post.content}</span>
       </div>
