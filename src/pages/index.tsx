@@ -39,7 +39,7 @@ const CreatePostWizard = () => {
   
   const [input, setInput] = useState("");
 
-  // console.log(user);
+  console.log(user);
 
   if(!user) return null;
 
@@ -125,3 +125,5 @@ export default function Home() {
     </>
   );
 }
+
+//test comment to push to vercel
