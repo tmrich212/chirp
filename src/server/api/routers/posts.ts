@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/prefer-optional-chain */
 import { clerkClient } from "@clerk/nextjs/server";
 
 import { TRPCError } from "@trpc/server";

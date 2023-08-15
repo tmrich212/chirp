@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 import type { GetStaticProps,NextPage } from "next";
 import Head from "next/head";

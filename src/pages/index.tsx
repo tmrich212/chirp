@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/prefer-optional-chain */
 /* eslint-disable @next/next/no-img-element */
 import { SignInButton, useUser } from "@clerk/nextjs";
 import Head from "next/head";
