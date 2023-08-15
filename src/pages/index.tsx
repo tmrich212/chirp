@@ -2,16 +2,11 @@
 /* eslint-disable @next/next/no-img-element */
 import { SignInButton, useUser } from "@clerk/nextjs";
 import Head from "next/head";
-
 import { api } from "~/utils/api";
-
-
-
 import Image from "next/image";
 import { LoadingPage, LoadingSpinner } from "~/components/loading";
 import { useState } from "react";
 import toast from "react-hot-toast";
-
 import { PageLayout } from "~/components/layout";
 import { PostView } from "~/components/postview";
 
@@ -39,7 +34,7 @@ const CreatePostWizard = () => {
   
   const [input, setInput] = useState("");
 
-  console.log(user);
+  // console.log(user);
 
   if(!user) return null;
 
